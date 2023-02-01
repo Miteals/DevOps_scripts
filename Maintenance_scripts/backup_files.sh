@@ -5,7 +5,7 @@ set -euo pipefail
 #Script creates backup of current directory, compresses them using tar.gz 
 #and saves backup files in the /backup dir with the current date
 
-backup_dir=@1
+backup_dir=$1
 today=`date +%Y%m%d`
 
 if [ ! -d "$backup_dir" ]; then
